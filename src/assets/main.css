@@ -1,1 +1,9 @@
 @import './base.css';
+
+:root{
+    --color-principal: #313130;
+    --color-secundario: #00A8C6;
+    --color-terceario: #40C0CB;
+    --color-ayuda: #F9F2E7;
+    --color-text: #8FBE00;
+}
