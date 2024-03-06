@@ -20,7 +20,7 @@ onMounted(() => {
 const configuracionConexion = () => {
     // Configura la conexión
     connection.value = new signalR.HubConnectionBuilder()
-        .withUrl("https://chat-backend-fmhd.onrender.com/message", {withCredentials: true}) // Reemplaza con la URL correcta de tu servidor
+        .withUrl("http://localhost:5145/message", {withCredentials: true}) // Reemplaza con la URL correcta de tu servidor
         .build();
 
     // Inicia la conexión
@@ -48,7 +48,7 @@ const conexiones = () => {
 }
 
 const chatlist = () => {
-    fetch('https://chat-backend-fmhd.onrender.com/Chat', {
+    fetch('http://localhost:5145/Chat', {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const chatlist = () => {
 }
 
 const userName = () =>{
-    fetch('https://chat-backend-fmhd.onrender.com/Chat/UserName', {
+    fetch('http://localhost:5145/Chat/UserName', {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",

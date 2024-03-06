@@ -26,7 +26,7 @@ onMounted(() => {
 })*/
 
 const userName = () =>{
-    fetch('https://chat-backend-fmhd.onrender.com/Chat/UserName', {
+    fetch('http://localhost:5145/Chat/UserName', {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const userName = () =>{
 const configuracionConexion = () => {
     // Configura la conexión
     connection.value = new signalR.HubConnectionBuilder()
-        .withUrl("https://chat-backend-fmhd.onrender.com/message", {withCredentials: true}) // Reemplaza con la URL correcta de tu servidor
+        .withUrl("http://localhost:5145/message", {withCredentials: true}) // Reemplaza con la URL correcta de tu servidor
         .build();
 
     // Inicia la conexión
@@ -69,7 +69,7 @@ const enviarMensaje = async () => {
             console.error("Error al enviar el mensaje", error);
         });*/
 
-    fetch('https://chat-backend-fmhd.onrender.com/Chat/SendMessage', {
+    fetch('http://localhost:5145/Chat/SendMessage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
