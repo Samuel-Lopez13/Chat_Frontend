@@ -123,6 +123,7 @@ const seleccionar = (chat_id, name) => {
     chatId.value = route.params.chatId;
 
     nombre.value = name
+    mensajes.value = []
 
     connection.value.invoke("AddToGroup", "" + chatId.value)
         .catch((e) => console.error(e));
